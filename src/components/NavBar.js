@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 class NavBar extends React.Component {
     render(){
         return(
-            //navbar default bootstrap with href="#" replaced by to='' with component pages
+            //navbar default bootstrap with 'href="#"' replaced by 'to=""' and 'a' replaced with 'Link'
             <nav className="navbar navbar-expand-lg navbar-light bg-custom-gradient">
                 <div className="container-fluid">
                     <a className="navbar-brand">
                         <img
-                            src="icons8-bank-64-purple.png"
+                            src="icons8-bank-64-teal.png"
                             width="30"
                             height="30"
                             className="d-inline-block align-top"

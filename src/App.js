@@ -1,5 +1,4 @@
 //default imports
-import logo from './logo.svg';
 import './App.css';
 
 //additional imports...
@@ -15,20 +14,20 @@ import AllData from './components/AllData';
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <NavBar/>
-        <div>
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/Account" element={<Account />} />
-            <Route path="/Deposit" element={<Deposit />} />
-            <Route path="/Withdraw" element={<Withdraw />} />
-            <Route path="/AllData" element={<AllData />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </div>
+      <div>
+        <BrowserRouter>
+          <NavBar/>
+          <div>
+            <Routes>
+              <Route path="/" exact element={<Home />} />
+              <Route path="/Account" element={<Account />} />
+              <Route path="/Deposit" element={<Deposit />} />
+              <Route path="/Withdraw" element={<Withdraw />} />
+              <Route path="/AllData" element={<AllData />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </div>
   );
 }
 

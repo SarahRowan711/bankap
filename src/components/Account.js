@@ -35,9 +35,7 @@ class Account extends React.Component {
                             <input type="submit" name="submit" id="submit" className="form-submit" value="Sign up"/>
                         </div>
                     </form>
-                    <p className="loginhere">
                         Already have an account? <a href="#" className="loginhere-link">Login here</a>
-                    </p>
                     </>
                     </Card.Body>
                 </Card>

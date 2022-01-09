@@ -5,9 +5,17 @@ class NavBar extends React.Component {
     render(){
         return(
             //navbar default bootstrap with href="#" replaced by to='' with component pages
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light bg-custom-gradient">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#"></a>
+                    <a className="navbar-brand">
+                        <img
+                            src="icons8-bank-64-purple.png"
+                            width="30"
+                            height="30"
+                            className="d-inline-block align-top"
+                            alt="Credit Union of Eleusis"
+                        />
+                    </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>

@@ -4,7 +4,7 @@ class Home extends React.Component {
     render(){
         return(
             <div>
-            <h1>LANDING PAGE</h1>
+            <h1>Welcome to the Credit Union of Eleusis</h1>
             </div>
         )
     }

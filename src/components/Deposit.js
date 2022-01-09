@@ -10,9 +10,7 @@ class Deposit extends React.Component {
     }
 };
 
-function deposit(){
-
-}
+//function deposit(){}
 
 //balance display
 //deposit input

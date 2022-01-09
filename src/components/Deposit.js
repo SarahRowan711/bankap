@@ -4,7 +4,7 @@ class Deposit extends React.Component {
     render(){
         return(
             <div>
-            <h1>This will be the depost page</h1>
+            <h1>This will be the deposit page</h1>
             </div>
         )
     }

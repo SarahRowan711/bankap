@@ -5,7 +5,7 @@ class NavBar extends React.Component {
     render(){
         return(
             //navbar default bootstrap with 'href="#"' replaced by 'to=""' and 'a' replaced with 'Link'
-            <nav className="navbar navbar-expand-lg navbar-light bg-custom-gradient">
+            <nav className="navbar navbar-expand-lg navbar-custom bg-custom-gradient">
                 <div className="container-fluid">
                     <a className="navbar-brand">
                         <img

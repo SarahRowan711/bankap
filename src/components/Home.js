@@ -17,11 +17,9 @@ class Home extends React.Component {
                         <Card.Text>
                             Welcome to the Credit Union of Eleusis! Become a member today!
                         </Card.Text>
-                        <>
-                        <div className="form-group">
-                            <input type="submit" name="submit" id="submit" className="form-submit" value="Sign In"/>
-                        </div>
-                        </>
+                        <Button className="btn-custom" type="submit">
+                         Sign In
+                        </Button>
                     </Card.Body>
                 </Card>
             </div>

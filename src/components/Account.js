@@ -16,11 +16,11 @@ class Account extends React.Component {
                                 Sign up to become a member today!
                             </Card.Text>
                         <Form>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Group className="mb-3" controlId="formBasicFirstName">
                                 <Form.Label>First Name</Form.Label>
                                 <Form.Control type="text" placeholder="Enter first name" />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Group className="mb-3" controlId="formBasicLastName">
                                 <Form.Label>Last Name</Form.Label>
                                 <Form.Control type="text" placeholder="Enter last name" />
                             </Form.Group>

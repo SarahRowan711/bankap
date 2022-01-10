@@ -19,17 +19,16 @@ class NavBar extends React.Component {
                     Credit Union of Eleusis    
                     </Navbar.Brand>
                     <Nav className="navbar-nav">
-                    <Link className="nav-link" to="/">Home</Link>
-                    <Link className="nav-link" to="/Account">Account</Link>
-                    <Link className="nav-link" to="/Deposit">Deposit</Link>
-                    <Link className="nav-link" to="/Withdraw">Withdraw</Link>
-                    <Link className="nav-link" to="/AllData">AllData</Link>
+                        <Link className="nav-link" to="/">Home</Link>
+                        <Link className="nav-link" to="/Account">Account</Link>
+                        <Link className="nav-link" to="/Deposit">Deposit</Link>
+                        <Link className="nav-link" to="/Withdraw">Withdraw</Link>
+                        <Link className="nav-link" to="/AllData">AllData</Link>
                     </Nav>
                     </Container>
                 </Navbar>
             </div>
-
-        )
+        );
     }
 };
 

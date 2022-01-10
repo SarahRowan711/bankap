@@ -12,16 +12,18 @@ class Deposit extends React.Component {
                 <Card className="text-center" style={{ width: '30rem' }}>
                     <Card.Body>
                         <Card.Title>Account Balance</Card.Title>
-                        <Card.Text>BALANCE GOES HERE</Card.Text>
+                        <Card.Text>
+
+                        </Card.Text>
                     </Card.Body>
                     <Card.Body>
                         <Card.Title>Make a deposit to your account</Card.Title>
                         <Card.Text>
                             <Form>
-                                <Form.Control type="number" placeholder="Enter your deposit amount" />
+                                <Form.Control type="number" placeholder="Enter your deposit amount" onChange={onChange} />
                             </Form>
                         </Card.Text>
-                        <Button className="btn-custom" type="submit">
+                        <Button className="btn-custom" type="submit" onClick={submitDeposit}>
                             Submit Deposit
                         </Button>
                     </Card.Body>
@@ -31,7 +33,14 @@ class Deposit extends React.Component {
     }
 };
 
-//function deposit(){}
+const onChange = (onChange) => {
+    return (console.log('onChangeblah'));
+}
+const submitDeposit = (submitDeposit) => {
+    return (console.log('submitDepositblah'));
+}
+
+
 
 //balance display
 //deposit input

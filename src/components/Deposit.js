@@ -12,9 +12,7 @@ class Deposit extends React.Component {
                 <Card className="text-center" style={{ width: '30rem' }}>
                     <Card.Body>
                         <Card.Title>Account Balance</Card.Title>
-                        <Card.Text>
-
-                        </Card.Text>
+                        <Card.Text>BALANCE GOES HERE</Card.Text>
                     </Card.Body>
                     <Card.Body>
                         <Card.Title>Make a deposit to your account</Card.Title>

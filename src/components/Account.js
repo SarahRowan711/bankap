@@ -9,7 +9,7 @@ class Account extends React.Component {
                 position: 'absolute', left: '50%', top: '50%',
                 transform: 'translate(-50%, -50%)'
             }}>
-                <Card classNameName="text-center" style={{ width: '30rem' }}>
+                <Card className="text-center" style={{ width: '30rem' }}>
                     <Card.Body>
                         <Card.Title>Credit Union of Eleusis</Card.Title>
                             <Card.Text>

@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Context from './components/Context';
 import Home from './components/Home';
-import Account from './components/Account';
+import CreateAccount from './components/Account';
 import Deposit from './components/Deposit';
 import Withdraw from './components/Withdraw';
 import AllData from './components/AllData';
@@ -20,7 +20,7 @@ function App() {
       <Context>
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/Account" element={<Account />} />
+        <Route path="/Account" element={<CreateAccount />} />
         <Route path="/Deposit" element={<Deposit />} />
         <Route path="/Withdraw" element={<Withdraw />} />
         <Route path="/AllData" element={<AllData />} />

@@ -1,13 +1,15 @@
 import React from "react";
 
-const UserContext = React.createContext();
+const UserContext = React.createContext(null);
+
+console.log("context invoked");
 
 class Context extends React.Component {
-    state = {users: [{
-        name: 'user',
-        email: 'user@mail.edu',
-        password: 'secret',
-        balance: 100
+        state = {users: [{
+        name: '',
+        email: '',
+        password: '',
+        balance: 0
     }]}
     render(){
         return(
@@ -15,9 +17,8 @@ class Context extends React.Component {
                 { state: this.state,
                 setUsers: (value) => this.setState({
                     users: value })}}>
-            {this.props.children})
+            {this.props.children}
             </UserContext.Provider>);
-            
     }
 }
 

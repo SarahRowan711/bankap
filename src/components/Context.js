@@ -3,6 +3,7 @@ import React from "react";
 const UserContext = React.createContext(null);
 
 console.log("context invoked");
+console.log("Context.js" + Context.state.users.name);
 
 class Context extends React.Component {
         state = {users: [{

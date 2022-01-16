@@ -1,8 +1,11 @@
 import React from "react";
 import { Card, Table } from "react-bootstrap";
+import { UserContext } from "./Context";
 
-class AllData extends React.Component {
-    render(){
+function AllData() {
+    const context = React.useContext(UserContext);
+    let userData = context.state.users;
+    console.log(userData);
         return(
             <div
             style={{
@@ -37,7 +40,6 @@ class AllData extends React.Component {
                 </Card>
             </div>
         )
-    }
 };
 
 //styled and displayed on card

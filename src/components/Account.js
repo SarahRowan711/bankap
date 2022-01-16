@@ -38,9 +38,9 @@ function CreateAccount(){
             alert('Password is required')
             return;
         };
-        console.log(name, email, password);
         ctx.state.users.push({name, email, password, balance:500})
         setShow(false);
+        console.log("Account.js: " + name, email, password);
         console.log("handle create invoked ")
     }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Form, Button} from "react-bootstrap";
-import { UserContext } from "./Context";
+import ContextProvider, { UserContext } from "./Context";
 
 //card with form for new account containing name email password
 //validation on form fields
@@ -14,7 +14,8 @@ function CreateAccount(){
     const [name, setName] = React.useState('');
     const [email, setEmail] = React.useState(''); 
     const [password, setPassword] = React.useState('');
-    const ctx = React.useContext(UserContext);
+    const userContext = React.useContext(UserContext);
+    let users = userContext.state.users;
    
     function validate(field, label){
         if (!field) {
@@ -38,7 +39,9 @@ function CreateAccount(){
             alert('Password is required');
             return;
         };
-        ctx.state.users.push({name, email, password, balance:500})
+        
+        //users.push({name, email, password, balance:500})
+        userContext.setUsers(users);
         setShow(false);
         console.log("Account.js: " + name, email, password);
         console.log("handle create invoked ");

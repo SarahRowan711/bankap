@@ -27,21 +27,21 @@ function CreateAccount(){
     
     function handleCreate(){
         if (!validate(name, 'name')) {
-            alert('Name is required')
+            alert('Name is required');
             return;
         };
         if (!validate(email, 'email')) {
-            alert('Email is required')
+            alert('Email is required');
             return;
         };
         if (!validate(password, 'password')) {
-            alert('Password is required')
+            alert('Password is required');
             return;
         };
         ctx.state.users.push({name, email, password, balance:500})
         setShow(false);
         console.log("Account.js: " + name, email, password);
-        console.log("handle create invoked ")
+        console.log("handle create invoked ");
     }
 
     function clearForm(){
@@ -66,7 +66,8 @@ function CreateAccount(){
                         </Card.Text>
                         {show
                         ? 
-                        (<Form>
+                        (
+                        <Form>
                             <Form.Group className="mb-3" controlId="name">
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control type="text" value={name}
@@ -96,15 +97,15 @@ function CreateAccount(){
                                 Submit
                             </Button>
                         </Form>    
-                        )
-                        : 
-                        (<>
-                        <p></p>
+                        ):(
+                        <>
+                        <span>
                         <h5><center>Your account has been created!</center></h5>
                         <Button className="btn-custom"
                         onClick={clearForm}>
                             Create Another Account
                         </Button>
+                        </span>
                         </>)
                         }
                 </Card.Body>

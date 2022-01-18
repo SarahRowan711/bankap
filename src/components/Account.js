@@ -41,11 +41,6 @@ function CreateAccount(){
         
         setShow(false);
         
-        console.log("blah" + user.name, user.email, user.password);
-        console.log("user name" + user.name);
-        console.log("user email" + user.email);
-        console.log("user password" + user.password);
-        console.log("Account.js: " + name, email, password);
         console.log("handle create invoked ");
     }
 

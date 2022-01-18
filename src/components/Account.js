@@ -14,8 +14,7 @@ function CreateAccount(){
     const [name, setName] = React.useState('');
     const [email, setEmail] = React.useState(''); 
     const [password, setPassword] = React.useState('');
-    const userContext = React.useContext(UserContext);
-    let users = userContext.state.users;
+    const user = React.useContext(UserContext);
    
     function validate(field, label){
         if (!field) {
@@ -40,9 +39,12 @@ function CreateAccount(){
             return;
         };
         
-        //users.push({name, email, password, balance:500})
-        userContext.setUsers(users);
         setShow(false);
+        
+        console.log("blah" + user.name, user.email, user.password);
+        console.log("user name" + user.name);
+        console.log("user email" + user.email);
+        console.log("user password" + user.password);
         console.log("Account.js: " + name, email, password);
         console.log("handle create invoked ");
     }

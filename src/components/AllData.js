@@ -3,10 +3,9 @@ import { Card, Table } from "react-bootstrap";
 import { UserContext } from "./Context";
 
 function AllData() {
-    const userContext = React.useContext(UserContext);
-    let users = userContext.state.users;
+    const user = React.useContext(UserContext);
     
-    console.log('users: ' + users.email);
+    console.log('users: ' + user);
     
     return(
         <div
@@ -27,9 +26,9 @@ function AllData() {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{users.email}</td>
-                                <td>{users.name}</td>
-                                <td>{users.password}</td>
+                                <td>test</td>
+                                <td>test</td>
+                                <td>test</td>
                             </tr> 
                             </tbody>
                     </Table>

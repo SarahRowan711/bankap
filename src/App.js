@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'; //contains default styling for the na
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Context from './components/Context';
+import ContextProvider from './components/Context';
 import Home from './components/Home';
 import CreateAccount from './components/Account';
 import Deposit from './components/Deposit';
@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
-      <Context>
+      <ContextProvider>
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/Account" element={<CreateAccount />} />
@@ -25,7 +25,7 @@ function App() {
         <Route path="/Withdraw" element={<Withdraw />} />
         <Route path="/AllData" element={<AllData />} />
       </Routes>
-      </Context>
+      </ContextProvider>
   </BrowserRouter> 
   );
 }

@@ -3,9 +3,7 @@ import { Card, Table } from "react-bootstrap";
 import { UserContext } from "./Context";
 
 function AllData() {
-    const user = React.useContext(UserContext);
-    
-    console.log('users: ' + user);
+    const ctx = React.useContext(UserContext);
     
     return(
         <div

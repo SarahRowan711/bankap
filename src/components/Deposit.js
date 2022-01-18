@@ -1,10 +1,13 @@
 import React from "react";
 import {Card, Form, Button} from "react-bootstrap";
+import { UserContext } from "./Context";
 
 function Deposit() {
     const[deposit, setDeposit] = React.useState();
     const [show, setShow] = React.useState(true);
     const [status, setStatus] = React.useState('');
+    const ctx = React.useContext(UserContext);
+
     //fetch balance from context
     //faking for now
     let balance = 500;

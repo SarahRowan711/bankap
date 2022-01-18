@@ -5,15 +5,18 @@ const UserContext = React.createContext();
 console.log("context invoked");
 
 const ContextProvider = ({ children }) => {
-    const user = {
-        name: '',
-        email: '',
-        password: ''
-    }
+    const users = [
+        {
+            name: '',
+            email: '',
+            password: '',
+            balance: 0
+        }
+    ]
 
     return (
         <UserContext.Provider
-            value={user}>
+            value={users}>
         {children}
         </UserContext.Provider>
     );    

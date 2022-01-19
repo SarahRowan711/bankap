@@ -4,6 +4,7 @@ import { UserContext } from "./Context";
 
 function AllData() {
     const ctx = React.useContext(UserContext);
+    const users = ctx.users;
     
     return(
         <div
@@ -23,12 +24,14 @@ function AllData() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>test</td>
-                                <td>test</td>
-                                <td>test</td>
-                            </tr> 
-                            </tbody>
+                            {users.slice(1).map((user, index) => (
+                                <tr>
+                                    <td>{user.name}</td>
+                                    <td>{user.email}</td>
+                                    <td>{user.password}</td>
+                                </tr>
+                            ))}
+                        </tbody>
                     </Table>
                 </Card.Body>
             </Card>

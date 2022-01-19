@@ -1,17 +1,17 @@
 import React from "react";
 import {Card, Form, Button} from "react-bootstrap";
-import { UserContext } from "./Context";
+import ContextProvider, { UserContext } from "./Context";
 
 function Deposit() {
     const[deposit, setDeposit] = React.useState();
     const [show, setShow] = React.useState(true);
     const [status, setStatus] = React.useState('');
     const ctx = React.useContext(UserContext);
+    const users = ctx.users;
+    console.log('array length', users.length)
+    let balance = users[0].balance;
+    console.log("balance", balance);
 
-    //fetch balance from context
-    //faking for now
-    let balance = 500;
-    
     function validate(field, label){
         if (!field) {
             setStatus('Error: ' + label);
@@ -59,9 +59,11 @@ function Deposit() {
         }
    
         //add deposit to existing balance
-        let newBalance = balance + Number(deposit);
+        console.log('balance ', balance);
         
+        let newBalance = balance + Number(deposit);
         console.log('new balance is ' + newBalance);
+        
         setShow(false);
         return newBalance;
         }

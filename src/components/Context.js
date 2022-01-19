@@ -7,9 +7,9 @@ console.log("context invoked");
 const ContextProvider = ({ children }) => {
     const users = [
         {
-            name: '',
-            email: '',
-            password: '',
+            name: 'default',
+            email: 'default',
+            password: 'default',
             balance: 0
         }
     ]

@@ -10,11 +10,7 @@ function Withdraw() {
     const users = ctx.users;
        
      //fetch balance from most recently created user
-     let index = Number(users.length);
-     console.log("last user index", index);
-
-    //this doesn't work when I try to use 'index' in place of 0
-    let balance = users[0].balance;
+    let balance = users[users.length-1].balance;
     console.log('begining balance', balance)
     
     //validate input fields
@@ -46,6 +42,14 @@ function Withdraw() {
     }
 
     //validate withdrawal won't cause negative balance
+    function validateNoOverdraft(field) {
+        if ((balance - Number(field)) < 0) {
+            setStatus('Error');
+            setTimeout(() => setStatus(''),3000);
+            return false;
+        }
+        return true;
+    }
 
     function handleWithdraw() {
         //validate that input was entered
@@ -65,14 +69,18 @@ function Withdraw() {
             alert('Withdrawal amount cannot be negative');
             return;
         }
+
+        if(!validateNoOverdraft(withdrawal)) {
+            alert('You may not withdraw more than is available in your balance');
+            return;
+        }
     
         //subtract withdrawal from existing balance
         let newBalance = balance - Number(withdrawal);
         console.log('new balance is ' + newBalance);
 
         //update balance in user context
-        //this doesn't work when I try to use 'index' in place of 0
-        users[0].balance = newBalance;
+        users[users.length-1].balance = newBalance;
         console.log('balance fetched from object', users[1].balance)
 
         setShow(false);

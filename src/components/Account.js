@@ -40,6 +40,7 @@ function CreateAccount(){
             alert('Password is required');
             return;
         };
+        
         console.log("attempting to push to context");
         ctx.users.push({name, email, password, balance:500});        
         setShow(false);

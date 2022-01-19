@@ -7,11 +7,17 @@ function Withdraw() {
     const [show, setShow] = React.useState(true);
     const [status, setStatus] = React.useState('');
     const ctx = React.useContext(UserContext);
+    const users = ctx.users;
+       
+     //fetch balance from most recently created user
+     let index = Number(users.length);
+     console.log("last user index", index);
+
+    //this doesn't work when I try to use 'index' in place of 0
+    let balance = users[0].balance;
+    console.log('begining balance', balance)
     
-    //fetch balance from context
-    //faking for now
-    let balance = 500;
-    
+    //validate input fields
     function validate(field, label){
         if (!field) {
             setStatus('Error: ' + label);
@@ -62,8 +68,12 @@ function Withdraw() {
     
         //subtract withdrawal from existing balance
         let newBalance = balance - Number(withdrawal);
-        
         console.log('new balance is ' + newBalance);
+
+        //update balance in user context
+        users[0].balance = newBalance;
+        console.log('balance fetched from object', users[1].balance)
+
         setShow(false);
         return newBalance;
         }

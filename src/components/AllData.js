@@ -21,6 +21,7 @@ function AllData() {
                                 <th>Email</th>
                                 <th>Name</th>
                                 <th>Password</th>
+                                <th>Balance</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,6 +30,7 @@ function AllData() {
                                     <td>{user.name}</td>
                                     <td>{user.email}</td>
                                     <td>{user.password}</td>
+                                    <td>{user.balance}</td>
                                 </tr>
                             ))}
                         </tbody>

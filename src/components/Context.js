@@ -17,7 +17,7 @@ const ContextProvider = ({ children }) => {
     return (
         <UserContext.Provider
             value={{users}}>
-        {children}
+            {children}
         </UserContext.Provider>
     );    
 };

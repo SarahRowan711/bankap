@@ -71,6 +71,7 @@ function Withdraw() {
         console.log('new balance is ' + newBalance);
 
         //update balance in user context
+        //this doesn't work when I try to use 'index' in place of 0
         users[0].balance = newBalance;
         console.log('balance fetched from object', users[1].balance)
 

@@ -1,5 +1,6 @@
 # Simple Banking Application
 This is a project I built for the MIT xPRO Professional Certificate in Coding bootcamp.
+![image](https://user-images.githubusercontent.com/12866282/160875863-7213a89b-dd8f-49cb-b990-57856a4a1413.png)
 
 ### Installation
 To run this app, clone the bankapp repository and run 'npm start' in the project directory.

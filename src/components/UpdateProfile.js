@@ -106,10 +106,10 @@ function UpdateProfile(){
                         ):(
                             <>
                             <span>
-                            <h5><center>Your account has been created!</center></h5>
+                            <h5><center>Your profile has been updated!</center></h5>
                             <Button className="btn-custom"
                             onClick={clearForm}>
-                                Create Another Account
+                                Make another update.
                             </Button>
                             </span>
                             </>)

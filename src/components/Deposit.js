@@ -67,6 +67,9 @@ function Deposit() {
         //update balance in user context
         users[users.length-1].balance = newBalance;
         console.log('balance fetched from object', users[users.length-1].balance)
+
+        //add transaction to user history
+        
         
         setShow(false);
         return newBalance;

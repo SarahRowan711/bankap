@@ -5,14 +5,20 @@ const UserContext = React.createContext();
 console.log("context invoked");
 
 const ContextProvider = ({ children }) => {
-    const users = [
-        {
-            name: 'default',
-            email: 'default',
-            password: 'default',
-            balance: 0
-        }
-    ]
+    const users = [{
+        accountNumber: 'default',
+        username: 'default',
+        name: 'default',
+        email: 'default',
+        password: 'default',
+        balance: 0,
+        transactions: [{
+            date: 'default',
+            transactionType: 'default',
+            amount: 0
+            }
+        ]
+    }]
 
     return (
         <UserContext.Provider

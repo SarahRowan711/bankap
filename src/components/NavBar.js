@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Container, Nav} from "react-bootstrap";
+import { UserContext } from "./Context"; //will be used to display username
 
 class NavBar extends React.Component {
     render(){
@@ -20,10 +21,9 @@ class NavBar extends React.Component {
                     </Navbar.Brand>
                     <Nav className="navbar-nav">
                         <Link className="nav-link" to="/">Home</Link>
-                        <Link className="nav-link" to="/Account">Account</Link>
                         <Link className="nav-link" to="/Deposit">Deposit</Link>
                         <Link className="nav-link" to="/Withdraw">Withdraw</Link>
-                        <Link className="nav-link" to="/AllData">AllData</Link>
+                        <Link className="nav-link" to="/UserData">Your Account</Link>
                     </Nav>
                     </Container>
                 </Navbar>

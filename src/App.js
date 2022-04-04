@@ -8,10 +8,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import ContextProvider from './components/Context';
 import Home from './components/Home';
-import CreateAccount from './components/Account';
+import SignIn from './components/SignIn'
+import CreateAccount from './components/CreateAccount';
 import Deposit from './components/Deposit';
 import Withdraw from './components/Withdraw';
-import AllData from './components/AllData';
+import UserData from './components/UserData';
+import UpdateProfile from './components/UpdateProfile';
 
 function App() {
   return (
@@ -20,10 +22,12 @@ function App() {
       <ContextProvider>
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/Account" element={<CreateAccount />} />
+        <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/CreateAccount" element={<CreateAccount />} />
         <Route path="/Deposit" element={<Deposit />} />
         <Route path="/Withdraw" element={<Withdraw />} />
-        <Route path="/AllData" element={<AllData />} />
+        <Route path="/UserData" element={<UserData />} />
+        <Route path="/UpdateProfile" element={<UpdateProfile />} />
       </Routes>
       </ContextProvider>
   </BrowserRouter> 

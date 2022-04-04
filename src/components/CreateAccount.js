@@ -8,11 +8,12 @@ import ContextProvider, { UserContext } from "./Context";
 //button to add another after submission (clears form)
 
 function CreateAccount(){
-    console.log('create account invoked')
+    console.log('Account page rendered')
     const [show, setShow] = React.useState(true);
     const [status, setStatus] = React.useState('');
     const [name, setName] = React.useState('');
-    const [email, setEmail] = React.useState(''); 
+    const [email, setEmail] = React.useState('');
+    const [username, setUsername] = React.useState(''); 
     const [password, setPassword] = React.useState('');
     const ctx = React.useContext(UserContext);
     console.log("context", ctx);
@@ -36,13 +37,17 @@ function CreateAccount(){
             alert('Email is required');
             return;
         };
+        if (!validate(username, 'username')) {
+            alert('Username is required');
+            return;
+        };
         if (!validate(password, 'password')) {
             alert('Password is required');
             return;
         };
         
         console.log("attempting to push to context");
-        ctx.users.push({name, email, password, balance:500});        
+        ctx.users.push({name, email, username, password, balance:500});        
         setShow(false);
     }
 
@@ -50,6 +55,7 @@ function CreateAccount(){
         console.log("clear form invoked")
         setName('');
         setEmail('');
+        setUsername('');
         setPassword('');
         setShow(true);
     }
@@ -85,10 +91,16 @@ function CreateAccount(){
                                 We'll never share your email with anyone else.
                                 </Form.Text>
                             </Form.Group>
+                            <Form.Group className="mb-3" controlId="username">
+                                <Form.Label>Username</Form.Label>
+                                <Form.Control type="text" value={username}
+                                placeholder="Create a username"
+                                onChange={e => setUsername(e.currentTarget.value)} />
+                            </Form.Group>
                             <Form.Group className="mb-3" controlId="password">
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control type="password" value={password}
-                                placeholder="Enter password"
+                                placeholder="Create a password"
                                 onChange={e => setPassword(e.currentTarget.value)} />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
